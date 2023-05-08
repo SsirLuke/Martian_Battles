@@ -5,7 +5,7 @@ pygame.mixer.init()
 
 WIDTH, HEIGHT = 1000, 1000
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("First Game!")
+pygame.display.set_caption("Martian Battles")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -14,9 +14,9 @@ YELLOW = (255, 255, 0)
 
 BORDER = pygame.Rect(0, HEIGHT//2 - 10, WIDTH, 10)
 
-BULLET_HIT_SOUND = pygame.mixer.Sound('Assets/Grenade+1.mp3')
-BULLET_FIRE_SOUND = pygame.mixer.Sound('Assets/Gun+Silencer.mp3')
-IM_BOUTA_BLOW = pygame.mixer.Sound('Assets/im-bouta-blow.mp3')
+BULLET_HIT_SOUND = pygame.mixer.Sound('Pygame_games\Assets\Grenade+1.mp3')
+BULLET_FIRE_SOUND = pygame.mixer.Sound('Pygame_games\Assets\Gun+Silencer.mp3')
+IM_BOUTA_BLOW = pygame.mixer.Sound('Pygame_games\Assets\im-bouta-blow.mp3')
 
 HEALTH_FONT = pygame.font.SysFont('timesnewroman', 40)
 WINNER_FONT = pygame.font.SysFont('timesnewroman', 100)
@@ -34,19 +34,19 @@ RED_HIT = pygame.USEREVENT + 2
 
 #spaceship and martian images
 YELLOW_SPACESHIP_IMAGE = pygame.image.load(
-    os.path.join('Assets', 'spaceship_yellow.png'))
+    os.path.join('Pygame_games\Assets\spaceship_yellow.png'))
 YELLOW_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
     YELLOW_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 0)
 
 RED_SPACESHIP_IMAGE = pygame.image.load(
-    os.path.join('Assets', 'Martian.png'))
+    os.path.join('Pygame_games\Assets\Martian.png'))
 RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
     RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 180)
 
 GALAXY = pygame.transform.scale(pygame.image.load(
-    os.path.join('Assets', 'Galaxy.png')), (WIDTH, HEIGHT))
+    os.path.join('Pygame_games\Assets\Galaxy.png')), (WIDTH, HEIGHT))
 
-EXPLOSION = pygame.image.load(os.path.join('Assets', 'explosion.png'))
+
 
 
 def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health):
@@ -197,4 +197,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
